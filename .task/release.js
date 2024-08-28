@@ -28,6 +28,9 @@ const main = async () => {
 		const workspacepkgpath = workspace.to('package.json')
 		const workspacepkg = await fs.readFileJson(workspacepkgpath)
 
+		// We only need to publish @stitches/react
+		if (workspacepkg.name !== '@atom-learning/stitches-react') continue
+
 		state.version = `v${workspacepkg.version}`
 
 		workspacepkgpaths.add(workspacepkgpath)
