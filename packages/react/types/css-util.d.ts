@@ -98,6 +98,7 @@ export type CSS<
 			| CSS<Media, Theme, ThemeMap, Utils>
 			| {}
 			| undefined
+			| any
 		)
 	}
 )
